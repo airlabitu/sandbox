@@ -9,15 +9,17 @@ int value = 0;
 int channel;
 
 
-void setup() {
-  println(Serial.list());
-  String portName = Serial.list()[10];
-  myPort = new Serial(this, portName, 9600);
+void setup() {  
+  // print the serial list with indexes
+  for (int i = 0; i < Serial.list().length; i++) println(i, Serial.list()[i]);
+  println();
+  
+  String portName = Serial.list()[10]; // choose the right index in the printed serial list
+  myPort = new Serial(this, portName, 9600); // setup the serial connection
 }
 
-void draw() {
+void draw() {}
 
-}
 
 // event function called by processing when receiving new serial data
 void serialEvent(Serial myPort) {
