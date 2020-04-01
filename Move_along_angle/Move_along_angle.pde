@@ -1,3 +1,7 @@
+/*
+This code gives an example of how to move a point in a direction based on a given angle
+*/
+
 PVector orign, movedPoint;
 
 float rotation;
@@ -11,7 +15,7 @@ void draw() {
   background(0);
   
   orign = new PVector(250, 250); // set origin
-  rotation = getRotation(orign.x, orign.y, mouseX, mouseY); // Calculate a rotation ro use  
+  rotation = getRotation(orign.x, orign.y, mouseX, mouseY); // get angle between mouse and origin point 
   
   // draw origin
   fill(255, 0, 0);
