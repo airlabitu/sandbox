@@ -5,7 +5,7 @@
 
 float orientation; // players front facing angle
 float balance; // stereo balance -1 to 1
-PVector player = new PVector(); // player posotion
+PVector player = new PVector(); // player position
 PVector sound = new PVector(200, 300); // sound position
 
 void setup(){
@@ -27,7 +27,6 @@ void draw(){
   // visualize everything  
   line(sound.x, sound.y, player.x, player.y);
   fill(255,0,0);
-  //circle(direction.x, direction.y, 10);
   fill(0,0,255);
   circle(player.x, player.y, 40);
   fill(0,255,0);
@@ -43,13 +42,13 @@ void draw(){
 
 }
 
-// method that calculates rotation of one point around another
+// --- method that calculates a sound balance based on a player(listeners) position and orientation, and the sound origin (position) ---
 float getBalance(float playerX, float playerY, float playerOrientation, float soundX, float soundY){
   
   PVector a = new PVector(playerX, playerY);   // point a
-  PVector b = new PVector(soundX, soundY);   // point b
-  PVector r = new PVector(0, -100);  // reference point
-  r.rotate(radians(playerOrientation+90));
+  PVector b = new PVector(soundX, soundY);     // point b
+  PVector r = new PVector(0, -100);            // reference point
+  r.rotate(radians(playerOrientation+90));     // rotate from front to side of the player
  
   b.sub(a);             // move point b
   a.sub(a);             // move point a
