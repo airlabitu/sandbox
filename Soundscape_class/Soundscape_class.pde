@@ -29,6 +29,8 @@ void setup() {
     tracks[i] = new Track("track " + i, i);
   }
   
+
+  soundTestSetup();  
   tracks[round(random(0,tracks.length-1))].start();
 }
 
@@ -49,11 +51,14 @@ void draw() {
     }
   }
   
+  
+  
   // change soundscape
   if (millis() > timer1 + interval1){ 
     // soundscape manipulations
     manipulateTracks(); 
   }
+  
   
   // visualize tracks
   visualize();
@@ -107,4 +112,14 @@ int playingTrack(Track [] tracksList){
     if (tracksList[i].isPlaying) return i;  
   }
   return -1;
+}
+
+void soundTestSetup(){
+  tracks[0].setVolMinMax(0,107);   // Forrest
+  tracks[1].setVolMinMax(0,107);   // Animals
+  tracks[2].setVolMinMax(0,95);    // Radio chatter
+  tracks[3].setVolMinMax(0,95);    // Chanting
+  tracks[4].setVolMinMax(0,102);   // Talk
+  tracks[5].setVolMinMax(0,102);   // Water
+  //tracks[2].start();
 }
