@@ -46,7 +46,7 @@ def add_weekday(title, start_time, end_time, weeks):
 
 
 c = Calendar() # calendar object to insert the events in
-nr_of_weeks = 7 # for how many weeks should the event keep running
+nr_of_weeks = 15 # for how many weeks should the event keep running
 
 
 
