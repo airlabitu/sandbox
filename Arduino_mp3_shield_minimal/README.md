@@ -9,7 +9,7 @@ The rest of the functions and features can be found in the Arduino code examples
 ## Download libraries
 Use the Arduino IDEs build in library manager to install the two libraries:
 - SdFat (by Bill Greiman)
-- VS1052 for use with SdFat
+- VS1053 for use with SdFat
 
 
 ## Prepare SD card
