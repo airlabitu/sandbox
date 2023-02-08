@@ -13,7 +13,7 @@ void setup()
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
   
   // turn off the LED
-  leds[0] = CRGB(255,0,0);
+  leds[0] = CRGB(0,0,0);
   FastLED.show();
 }
 
