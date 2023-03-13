@@ -14,7 +14,7 @@ def blockCheck():
     output = output.decode("utf-8")
     output = output.strip().split("\n")
     result = output[1:]
-    print("array er:", result)
+    #print("array er:", result)
     return result
 
 def wipeSD(blockname):
