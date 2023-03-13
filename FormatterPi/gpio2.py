@@ -12,7 +12,7 @@ GPIO.setup(led_pin2,GPIO.OUT) # set the pin to output
 state = 0
 
 try:
-	print "Look at the bicolor LED. It should be alternating. Ctrl+C to end."
+	print ("Look at the bicolor LED. It should be alternating. Ctrl+C to end.")
 	while(1):
 		GPIO.output(led_pin1,state)
 		GPIO.output(led_pin2,not state)
