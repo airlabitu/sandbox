@@ -1,5 +1,6 @@
 # !/bin/python
-# FormatterPi live running script (2.0)
+# FormatterPi live running script (2.0).
+# Searches for newly inserted volumes (blocks). Will request to delete the first block on list, usually sda or sdb. Cannot delete itself "mmcblk"
 # Thomas Kaufmanas // AIRLAB ITU // spring 2023
 
 import time
@@ -7,7 +8,7 @@ import os
 import subprocess
 
 def blockCheck():
-    '''Use subprocess module to read block devices inserted. Returns a list of names'''
+    """Use subprocess module to read block devices inserted. Returns a list of names"""
     output = subprocess.Popen("lsblk -l -o NAME", shell=True, stdout=subprocess.PIPE).stdout
     output = output.read()
     output = output.decode("utf-8")
@@ -17,7 +18,7 @@ def blockCheck():
     return result
 
 def wipeSD(blockname):
-    '''formats an SD card by name of primary blocks (thereby including any partitions under this)'''
+    """formats an SD card by name of primary blocks (thereby including any partitions under this)"""
     b = blockname
     print("Unmounting all partitions...")
     os.system(f"sudo umount /dev/{b}?")
