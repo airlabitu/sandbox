@@ -3,4 +3,12 @@
 # Thomas Kaufmanas // AIRLAB ITU // spring 2023
 
 import RPi.GPIO as GPIO
-print("hello world")
+import time
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(37, GPIO.OUT)
+
+while True:
+    GPIO.output(37, GPIO.HIGH)
+    time.sleet(0.5)
+    GPIO.output(37, GPIO.LOW)
+    time.sleep(0.5)
