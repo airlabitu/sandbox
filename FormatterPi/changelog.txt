@@ -1,0 +1,9 @@
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install parted
+
+Danish keyboard setup
+
+created pythonscript in home directory
+
+removed automatic volume popup: filemanager > edit > preferences > volume management > uncheck "show available media types..." yadayada

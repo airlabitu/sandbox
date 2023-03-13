@@ -1,6 +1,5 @@
 # !/bin/python
-
-# FormatterPi script 2.0
+# FormatterPi script 1.0
 # Thomas Kaufmanas // AIRLAB // spring 2023
 
 import time

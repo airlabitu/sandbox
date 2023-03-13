@@ -1,4 +1,5 @@
-# FormatterPi live running script
+# !/bin/python
+# FormatterPi live running script (2.0)
 # Thomas Kaufmanas // AIRLAB ITU // spring 2023
 
 import time
