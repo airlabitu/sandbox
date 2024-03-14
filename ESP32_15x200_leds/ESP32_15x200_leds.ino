@@ -32,12 +32,12 @@ void loop() {
     }   
   }
   FastLED.show();
-  delay(5);
+  delay(50);
   for (int r = 0; r < rows; r++){
     for (int c = 0; c < columns; c++){
       leds[r][c] = CRGB::Black;
     }   
   }
   FastLED.show();
-  delay(5);
+  delay(50);
 }
