@@ -37,15 +37,22 @@ void setup() {
 }
 
 void loop() {
-  pot_a_value = analogRead(pot_a_pin);
-  heat_a = map(pot_a_value, 0, 1023, 0, 255);
-  pot_b_value = 1023-analogRead(pot_b_pin); // reverse direction for equal interaction on the box
-  heat_b = map(pot_b_value, 0, 1023, 0, 255);
+  // Side A
+  pot_a_value = analogRead(pot_a_pin); // reads the sensor (knop)
+  heat_a = map(pot_a_value, 0, 1023, 0, 102); // translates from sensor scale (0-1023) to heat output scale (0-102) [0 - 4.95 V]
+  analogWrite(enA, heat_a); // updates the heat output
+  // print the 
+  Serial.print("[A] voltage output: ");
+  Serial.println(heat_a/20.59);
 
-  Serial.println(pot_a_value);
-  Serial.println(pot_b_value);
+  // Side B
+  pot_b_value = 1023-analogRead(pot_b_pin); // reads the sensor (knop), and reverse direction for equal interaction on the box
+  heat_b = map(pot_b_value, 0, 1023, 0, 255);
+  analogWrite(enB, heat_b);
+  Serial.print("[B] voltage output: ");
+  Serial.println(heat_b/20.59);
+  
   Serial.println();
-  analogWrite(enA, heat_a);
-	analogWrite(enB, heat_b);
-  delay(100);
+	
+  delay(500);
 }
