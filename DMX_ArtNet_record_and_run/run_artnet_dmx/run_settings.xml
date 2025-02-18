@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <framerate>40</framerate>
+  <ip-address>192.168.1.20</ip-address>
+  <display>false</display>
+  <loop>true</loop>
+  <universes>
+    <value>1</value>
+    <value>2</value>
+    <value>3</value>
+    <value>4</value>
+    <value>5</value>
+    <value>6</value>
+    <value>7</value>
+    <value>8</value>
+  </universes>
+</settings>
