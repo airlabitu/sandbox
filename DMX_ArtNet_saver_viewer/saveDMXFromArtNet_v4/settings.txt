@@ -1,0 +1,5 @@
+framerate:44
+display:yes
+ip:127.0.0.1
+universes:1,2,3,4
+frames to record:500

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<settings>
+  <framerate>30</framerate>
+  <display>false</display>
+  <frames-to-record>700</frames-to-record>
+  <ip-address>127.0.0.1</ip-address>
+  <universes>
+    <value>2</value>
+    <value>3</value>
+    <value>4</value>
+    <value>5</value>
+  </universes>
+</settings>
+
+
+
