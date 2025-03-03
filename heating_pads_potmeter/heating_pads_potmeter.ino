@@ -25,7 +25,8 @@ void setup() {
 	digitalWrite(in2, LOW);
 }
 
-void loop() {  
+void loop() {
+  
   mic_sensor = analogRead(A1);
   Serial.println(mic_sensor);
   if (mic_sensor > mic_threshold){
@@ -40,7 +41,10 @@ void loop() {
     setHeat(255, 10000);
     
     setHeat(0, 0);
+
   }
+  
+  analogWrite(enA, 255);
 }
 
 void setHeat(int heat, int delay_){
